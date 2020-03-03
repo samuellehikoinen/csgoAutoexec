@@ -1,0 +1,139 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~AUTOEXEC - By Samua~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~SETTINGS~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//console
+con_enable 1
+cl_righthand 1
+cl_showpos 1
+net_graph 1
+net_graphproportionalfont 0
+net_graphpos 1
+net_graphheight 1
+
+//infomessages
+gameinstructor_enable 0 
+cl_showhelp 0 
+cl_autohelp 0 
+cl_disablefreezecam 1
+cl_disablehtmlmotd 1
+bind "k" "toggle gameinstructor_enable"
+
+//hud
+cl_hud_color 9
+cl_hud_background_alpha 0.6
+cl_hud_radar_scale 0.9
+cl_showloadout 1
+safezonex 0.9
+safezoney 0.9
+cl_radar_always_centered 0
+cl_radar_scale 0.6
+cl_showloadout 1
+
+//mouse
+m_rawinput 1
+m_customaccel 0
+sensitivity 1.9
+
+//sound
+voice_scale 0.3
+snd_mixahead 0.05
+//snd_musicvolume 0
+snd_headphone_pan_exponent 2
+
+//video settings
+mat_monitorgamma 1.60000
+
+//server
+mm_dedicated_search_maxping 75
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~IN-GAME~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//viewmodel
+viewmodel_fov 68
+viewmodel_offset_x 2
+viewmodel_offset_y 2
+viewmodel_offset_z -2
+viewmodel_presetpos 4
+
+//bobbing
+cl_bob_lower_amt 5
+cl_bobamt_lat 0.1
+cl_bobamt_vert 0.1
+cl_bobcycle 0.98
+
+//crosshair
+cl_bob_lower_amt 0
+cl_crosshaircolor 1
+cl_crosshair_outlinethickness 1
+cl_crosshairstyle 4
+cl_crosshairdot 0
+cl_crosshair_drawoutline 1
+cl_crosshairalpha 255
+cl_crosshairgap -1
+cl_crosshairsize 2.5
+
+//common
+cl_autowepswitch 0
+cl_use_opens_buy_menu 0
+
+//show damage done
+developer 1
+con_filter_text "Damage"
+con_filter_text_out "Player:"
+con_filter_enable "2"
+
+//~~~~~~~~~~~~~~~~~~~~KEYBINDS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//show teammates
+alias +showinv "+cl_show_team_equipment"
+alias -showinv ""
+bind "l" "+showinv"
+
+//communication
+bind "KP_END" radio1
+bind "KP_DOWNARROW" radio2
+bind "KP_PGDOWN" radio3
+bind "KP_LEFTARROW" roger
+
+//sound
+bind "mouse5" +voicerecord
+bind "mouse4" "toggle voice_enable"
+
+//antispam
+//alias voice_1  "ignoremsg 0;ignorerad 0;bind "KP_MINUS" voice_0;play buttons\button14"
+//alias voice_0 "ignoremsg;ignorerad 1;bind "KP_MINUS" voice_1;play buttons\button3"
+//alias ignor_msg "ignoremsg 1;ignoremsg 1"
+//ignorerad 0 
+//ignoremsg 0
+//bind "KP_MINUS" voice_0
+
+//exiting
+//bind "KP_PLUS" disconnect
+//bind "KP_MULTIPLY" exit
+
+//movement
+bind "mwheeldown" "+jump"
+//bind "mwheelup" "+duck"
+bind shift "+speed; r_cleardecals"
+
+//afkmode
+alias afkon "+forward; +back; echo Easy idle by Samua - [Enabled]"
+alias afkoff "-forward; -back; echo Easy idle by Samua - [Disabled]"
+
+//grenades
+bind "z" "use weapon_smokegrenade"
+bind "x" "use weapon_flashbang"
+//bind "c" "use weapon_hegrenade"
+bind "c" "use weapon_molotov; use weapon_incgrenade"
+
+//troll
+bind "F5" "say Raikku laittaa urut solmuun!"
+bind "F6" "say Mutsis on kovempi ku isis!"
+bind "F7" "say if(clutch == false) kick; else return; |"
+bind "F8" "say buying gf 50k ea"
+bind "F10" kill
+
+host_writeconfig
